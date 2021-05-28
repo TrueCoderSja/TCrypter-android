@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TCrypter</string>
+    <string name="EncryptActivityLabel">Encrypt File</string>
+    <string name="DecryptActivityLabel">Decrypt File</string>
+</resources>

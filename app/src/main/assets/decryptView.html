@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypt File</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function callDecrypt(){
+            let password=document.getElementById("passwordField").value;
+            window.jsInterface.runFunc('decrypt', [password]);
+            return false;
+        }
+     </script>
+     <script src="loadFile.js" type="text/javascript"></script>
+</head>
+<body>
+<form onsubmit="return false;">
+    <div id="iconDivison">
+        <h3>Selected File:</h3>
+        <img id="fileIcon" src="file.svg" width="200px" height="200px">
+        <p id="fileName">AnImage.text</p>
+    </div>
+    <div>
+        <label for="chooseBtn">Encrypted File:</label>
+        <input type="button" id="chooseBtn" value="Choose" onclick="window.jsInterface.runFunc('choose', [])">
+        <label for="passwordField">Password:</label>
+        <input type="password" id="passwordField">
+    </div>
+    <div>
+        <input type="submit" id="DecryptBtn" value="Decrypt" onclick="callDecrypt()">
+<!--        <input type="submit" id="copyDecryptBtn" value="Copy And Decrypt" onclick="window.jsInterface.runFunc('copyDecrypt', [])">-->
+    </div>
+</form>
+</body>
+</html>
